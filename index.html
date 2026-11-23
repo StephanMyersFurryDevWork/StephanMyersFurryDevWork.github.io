@@ -1,1 +1,617 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--website template -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephan Myers | My Little Corner of the Internet</title>
+
+    <style>
+        body {
+            background-color: #100c18;
+            background-image: radial-gradient(#302044 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #ded3e9;
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 20px;
+        }
+
+        a {
+            color: #c58bff;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: #191323;
+            border: 2px solid #68418a;
+            padding: 15px;
+            box-shadow: 0 0 20px #000000;
+        }
+
+        header {
+            text-align: center;
+            background: #281a38;
+            border: 1px dashed #a16bd0;
+            padding: 25px 10px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            color: #d7a9ff;
+            font-size: 34px;
+            margin: 5px;
+            text-shadow: 2px 2px #000;
+        }
+
+        header p {
+            color: #bba4d2;
+        }
+
+        .subtitle {
+            font-style: italic;
+        }
+
+        .nav {
+            text-align: center;
+            background: #302044;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            background: #21192d;
+            border: 1px solid #51356b;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            color: #d5a5ff;
+            border-bottom: 1px dashed #8055a5;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .columns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .columns .section {
+            flex: 1;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            background: #352344;
+            border: 3px dashed #a16bd0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+            justify-content: center;
+        }
+
+        .badge {
+            background: #39264e;
+            border: 1px solid #9063b4;
+            color: #e1c4ff;
+            padding: 5px 8px;
+            font-size: 11px;
+        }
+
+        .fact {
+            padding: 7px;
+            border-bottom: 1px dotted #59436c;
+        }
+
+        .fact strong {
+            color: #d5a5ff;
+        }
+
+        .status {
+            color: #92f5a3;
+            font-weight: bold;
+        }
+
+        .marquee {
+            background: #39264e;
+            padding: 8px;
+            overflow: hidden;
+            text-align: center;
+            color: #e1c4ff;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #4b3065;
+            padding: 8px 12px;
+            margin: 4px;
+            border: 1px solid #a16bd0;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #75499b;
+        }
+
+        .spec-list {
+            display: grid;
+            grid-template-columns: 145px 1fr;
+            gap: 8px 12px;
+        }
+
+        .spec-label {
+            color: #d5a5ff;
+            font-weight: bold;
+        }
+
+        .note {
+            color: #bba4d2;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .footer-note {
+            border-top: 1px dashed #59436c;
+            margin-top: 12px;
+            padding-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: #907da4;
+            font-size: 11px;
+            padding: 15px;
+        }
+
+        .small {
+            font-size: 11px;
+            color: #9e8bad;
+        }
+
+        @media (max-width: 600px) {
+            .columns {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            body {
+                padding: 8px;
+            }
+
+            .spec-list {
+                grid-template-columns: 1fr;
+                gap: 3px;
+            }
+
+            .spec-label {
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>★ Stephan Myers ★</h1>
+        <p class="subtitle">Welcome to my little corner of the internet!</p>
+        <p>Developer | Furry | VR Enthusiast | Professional Internet Dweller</p>
+    </header>
+
+    <div class="marquee">
+        ✦ Hey! Thanks for stopping by! Feel free to look around! ✦
+    </div>
+
+    <div class="nav">
+        <a href="#about">About Me</a>
+        <a href="#interests">Interests</a>
+        <a href="#dev">My Projects</a>
+        <a href="#pc">PC Specs</a>
+        <a href="#random">Random Stuff</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="columns">
+
+        <div class="section profile">
+            <div class="avatar">
+                <!--TODO: add a picture I like later-->
+                <!-- To add a picture, put it in an images folder in this repository. -->
+                <!-- Example: <img src="images/my-avatar.png" alt="My avatar"> -->
+                🐾
+            </div>
+            <h2>That's me!</h2>
+            <p><strong>Stephan Myers</strong></p>
+            <!-- let's not add my location rn.  -->
+            <!--<p>📍 Edmonton, Alberta, Canada</p>-->
+            <p class="status">● Probably online</p>
+
+            <div class="badges">
+                <span class="badge">Furry</span>
+                <span class="badge">Gay</span>
+                <span class="badge">Trans</span>
+                <span class="badge">Non-binary</span>
+                <span class="badge">VR Addict</span>
+                <span class="badge">Developer</span>
+                <span class="badge">Babyfur</span>
+                <span class="badge">Night Owl</span>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <h2>♡ A little about me</h2>
+
+            <p>
+                Hey there! I'm Stephan, a trans and non-binary person,
+                furry, developer, VR enthusiast, and generally someone
+                who spends way too much time on the internet.
+            </p>
+
+            <p>
+                I enjoy messing around with technology, writing code,
+                playing games, exploring virtual worlds, and finding
+                random things to occupy my free time.
+            </p>
+
+            <p>
+                I have a LOT of free time, probably more than I should.
+                So if I'm not doing something productive, there's a
+                pretty good chance I'm playing VR or browsing the web.
+            </p>
+
+            <p>
+                I'm gay, proudly part of furry and babyfur / ABDL
+                communities, and comfortable being myself. Being accepted
+                for who I am matters a lot to me. Life's too short to
+                pretend to be someone else.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="section" id="interests">
+        <h2>♡ Things I Like, first and formost, this is who I AM!</h2>
+
+        <div class="columns">
+            <div>
+                <h3>🐺 Furry Stuff</h3>
+                <p>
+                    Furry culture, cute characters, fursonas,
+                    furry friends, and the community in general.
+                    I also identify with babyfur / ABDL furry culture.
+                </p>
+            </div>
+
+            <div>
+                <h3>🥽 Virtual Reality</h3>
+                <p>
+                    VR is awesome. Virtual worlds, social VR,
+                    exploring different environments, and
+                    spending hours doing absolutely nothing
+                    in a virtual space. You'll often find me
+                    hanging out in ChilloutVR.
+                </p>
+            </div>
+
+            <div>
+                <h3>💻 Technology</h3>
+                <p>
+                    Programming, computers, servers, messing
+                    with software, and occasionally breaking
+                    something just to figure out how it works.
+                </p>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div>
+                <h3>🍵 Matcha</h3>
+                <p>
+                    Matcha is my favourite drink. A good matcha
+                    is pretty hard to beat.
+                </p>
+            </div>
+
+            <div>
+                <h3>🎨 Real Artists & Local Creators</h3>
+                <p>
+                    I believe in supporting real people who make things.
+                    I would rather commission an artist, buy from a local
+                    creator, or support someone's craft than rely on
+                    AI-generated work. Artists deserve to be paid and
+                    appreciated for what they create. Like this website template!!
+                </p>
+            </div>
+
+            <div>
+                <h3>🧸 Comfort & Cozy Time</h3>
+                <p>
+                    Cozy clothes, comfy spaces, and doing my own thing.
+                    And yes, there's a decent chance I'm wearing a diaper
+                    right now. It's just part of my life.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="looking">
+        <h2>♡ Looking for Someone</h2>
+
+        <p>
+            I'd really like to meet someone I can connect with,
+            preferably someone local to Edmonton or the surrounding area.
+            I'm open to making friends and seeing where a connection goes.
+        </p>
+
+        <p>
+            Sharing some of my interests, including furry and ABDL / kink
+            interests, would be lovely. You don't have to be exactly like
+            me, though. What matters most is that you're accepting of me
+            as a trans, non-binary person and respect me for who I am.
+        </p>
+
+        <p>
+            I'm looking for someone kind, accepting, communicative, and
+            comfortable talking openly about interests and boundaries.
+            Consent and mutual respect come first. No pressure, no
+            pretending to be someone you're not.
+        </p>
+
+        <p class="note">
+            Adults only, please. I'd rather have an honest conversation
+            and get to know someone than rush into anything.
+        </p>
+    </div>
+
+    <div class="section" id="dev">
+        <h2>💻 Developer Corner</h2>
+
+        <p>
+            I enjoy development and technology. I like building
+            things, experimenting with code, and figuring out
+            how stuff works behind the scenes.
+        </p>
+
+        <p>
+            Sometimes I have actual projects. Sometimes I just
+            start something at 2 AM because I had an idea.
+        </p>
+
+        <h3>Things I mess around with:</h3>
+
+        <ul>
+            <li>Web development, I try at least</li>
+            <li>Programming and scripting embedded devices</li>
+            <li>Linux and server administration</li>
+            <li>Random technical experiments</li>
+        </ul>
+
+        <p>
+            <a href="https://github.com/StephanMyersFurryDevWork" target="_blank" rel="noopener noreferrer">
+                My GitHub (just launched!!)
+            </a>
+        </p>
+    </div>
+
+    <div class="section" id="pc">
+        <h2>🖥️ The Computer (yes, I have a problem)</h2>
+
+        <p>
+            I like computers. Maybe a little too much. This is the
+            machine I use for gaming, development, and VR.
+        </p>
+
+        <!-- TODO: Replace these example parts with the actual PC hardware before publishing. -->
+        <h3>Desktop PC</h3>
+        <div class="spec-list">
+            <div class="spec-label">CPU</div>
+            <div>AMD Ryzen 9 9950X3D</div>
+
+            <div class="spec-label">Graphics</div>
+            <div>NVIDIA GeForce RTX 5090 (32 GB VRAM)</div>
+
+            <div class="spec-label">Memory</div>
+            <div>256GB DDR5 RAM</div>
+
+            <div class="spec-label">Storage</div>
+            <div>8 TB NVMe SSD storage</div>
+
+            <div class="spec-label">Operating system</div>
+            <div>Windows 11</div>
+
+            <div class="spec-label">Cooling</div>
+            <div>High-performance cooling, because apparently I enjoy heat output</div>
+        </div>
+
+        <p class="note">
+            Yes, 256GB of RAM. Sam Altman is probably crying somewhere.
+
+        </p>
+
+        <div class="footer-note">
+            <h3>🥽 VR Setup</h3>
+            <div class="spec-list">
+                <div class="spec-label">Main VR game</div>
+                <div>ChilloutVR</div>
+
+                <div class="spec-label">VR platform</div>
+                <div>PCVR</div>
+
+                <div class="spec-label">Headset</div>
+                <div><!-- TODO: Add headset model --> Quest 3</div>
+
+                <div class="spec-label">Controllers</div>
+                <div><!-- TODO: Add controller details --> Quest 3 contrallers </div>
+
+                <div class="spec-label">Tracking</div>
+                <div><!-- TODO: Add tracking setup --> none</div>
+
+                <div class="spec-label">Favourite thing to do</div>
+                <div>Hang out in virtual worlds and lose track of time</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns">
+
+        <div class="section" id="random">
+            <h2>🎲 Random Facts</h2>
+
+            <div class="fact">
+                <strong>Location:</strong> Edmonton, Alberta
+            </div>
+
+            <div class="fact">
+                <strong>Occupation:</strong> Currently looking
+            </div>
+
+            <div class="fact">
+                <strong>Free time:</strong> Yes.
+            </div>
+
+            <div class="fact">
+                <strong>Hobbies:</strong> VR, gaming, coding
+            </div>
+
+            <div class="fact">
+                <strong>Favourite drink:</strong> Matcha 🍵
+            </div>
+
+            <div class="fact">
+                <strong>Alcohol:</strong> Rarely, maybe once or twice a year
+            </div>
+
+            <div class="fact">
+                <strong>Smoking:</strong> Nope
+            </div>
+
+            <div class="fact">
+                <strong>Drugs:</strong> Nope
+            </div>
+
+            <div class="fact">
+                <strong>Personality:</strong> A little weird
+            </div>
+
+            <div class="fact">
+                <strong>Sleep schedule:</strong> What sleep schedule?
+            </div>
+
+            <div class="fact">
+                <strong>Favourite activity:</strong> Doing absolutely nothing
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Internet Things</h2>
+
+            <p>Some places you might find me:</p>
+
+            <p>
+                <a class="button" href="https://github.com/StephanMyersFurryDevWork" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+
+            <p>
+                <a class="button" href="https://chilloutvr.net/" target="_blank" rel="noopener noreferrer">ChilloutVR</a>
+            </p>
+
+            <p>
+                <a class="button" href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">Reddit</a>
+            </p>
+
+            <p class="small">
+                More links coming eventually. Maybe.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="section" id="contact">
+        <h2>💌 Get in Touch!</h2>
+
+        <p>
+            Want to chat, talk about development, VR, furry stuff,
+            matcha, art, or just hang out? Feel free to reach out!
+        </p>
+
+        <p>
+            You can find me on some of the platforms above.
+        </p>
+
+        <p>
+            Email: <i>Ask me first, I get a lot of scam</i>
+        </p>
+    </div>
+
+    <div class="section" style="text-align:center;">
+        <h2>Thanks for Visiting!</h2>
+
+        <p>
+            You've reached the bottom of my website.
+        </p>
+
+        <p>
+            I have no idea why you read all of this, but I appreciate it.
+        </p>
+
+        <p>🐾 Stay weird. Stay yourself. ♡</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Stephan Myers.</p>
+        <p>Hosted on GitHub Pages.</p>
+        <p>You are visitor number ??? (I have no idea how to add a counter)</p>
+        <p class="small">Last updated: November 2026</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
